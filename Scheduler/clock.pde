@@ -12,7 +12,7 @@ class Clock {
     for(int i = 1; i <= 12; i++){
       fill(0);
       textMode(CENTER);
-      text(i, 100 * cos(TWO_PI * i / 12 - PI / 2.0) + x, 100 * sin(TWO_PI * i / 12 - PI / 2.0) + y);
+      text(i, 100 * cos(TWO_PI * i / 12 - PI / 2.0) + x - 10, 100 * sin(TWO_PI * i / 12 - PI / 2.0) + y);
     }
     theta_s = TWO_PI * second() / 60 - PI / 2.0;
     xs = x + 100 * cos(theta_s);

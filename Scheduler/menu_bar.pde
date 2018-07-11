@@ -10,7 +10,7 @@ void menu_bar() {
   rect(width - m * 2, 0, 120, 800);
   textSize(20);
   for (int i = 0; i < 5; i++) {
-    fill(255, 255, 255, 255 - 255 / m * 4.25 +1);
+    fill(255, 255, 255);
     rect(width -m * 2, 20 + i * 60, 120, 40);
     if (i == 0) {
       fill(0);
@@ -22,7 +22,7 @@ void menu_bar() {
     }
     if (i == 2) {
       fill(0);
-      text("アラーム", width - m * 2 + 10, 47 + i * 60);
+      text("予定", width - m * 2 + 10, 47 + i * 60);
     }
     if (i == 3) {
       fill(0);
@@ -30,11 +30,10 @@ void menu_bar() {
     }
     if (i == 4) {
       fill(0);
-      text("HOME", width - m * 2 + 10, 47 + i * 60);
+      text("ホーム", width - m * 2 + 10, 47 + i * 60);
     }
   }
   menu_effect();
-  println(m);
 }
 
 void mouseReleased() {
@@ -52,7 +51,9 @@ void menu_effect() {
     for (int i = 0; i < 5; i++) {
       if (mouseY > 20 + i * 60 && mouseY < 60 + i * 60) {
         fill(0, 125, 125, 80);
-        rect(width -m * 2, 20 + i * 60, 120, 40);
+        rect(width - m * 2, 20 + i * 60, 120, 40);
+        fill(135, 0, 205);
+        rect(width - m *2, 20 + i * 60, 8, 40);
       }
     }
   }
