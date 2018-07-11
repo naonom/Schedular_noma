@@ -6,6 +6,8 @@ void menu_bar() {
     m  -= 2;
   }
   noStroke();
+  fill(255);
+  rect(width - 120, 0, 120, 680);
   fill(25, 22, 135, 255 - 255 / m * 4.25 + 1);
   rect(width - m * 2, 0, 120, 800);
   textSize(20);
@@ -34,16 +36,6 @@ void menu_bar() {
     }
   }
   menu_effect();
-}
-
-void mouseReleased() {
-  if (mouseX > width - 120) {
-    for (int i = 0; i < 5; i++) {
-      if (mouseY > 20 + i * 60 && mouseY < 60 + i * 60) {
-        page = i;
-      }
-    }
-  }
 }
 
 void menu_effect() {
