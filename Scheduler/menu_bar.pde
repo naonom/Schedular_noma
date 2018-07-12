@@ -13,7 +13,7 @@ void menu_bar() {
   textSize(20);
   for (int i = 0; i < 5; i++) {
     fill(255, 255, 255);
-    rect(width -m * 2, 20 + i * 60, 120, 40);
+    rect(width - m * 2 + 5, 20 + i * 60, 120, 40);
     if (i == 0) {
       fill(0);
       text("twitter", width - m * 2 + 10, 47 + i * 60);

@@ -4,6 +4,7 @@ Weather w;
 Time_6hour t;
 Clock c;
 Curriculum cu; 
+Task ta;
 //mouse_effect
 int mouse_count = 0;
 int ellipse_r = 10;
@@ -20,11 +21,14 @@ int r,g,b;
 //page
 int page = 4;
 int background_count = 1;
+//tasks
+String task [] = new String [7];
 void setup() {
   size(480, 640);
   w = new Weather();
   c = new Clock();
   t = new Time_6hour();
+  ta = new Task();
 }
 
 void draw() {
@@ -47,16 +51,18 @@ void draw() {
   case 4:
     disp4();
     break;
+  case 5:
+    disp5();
+    break;
   default:
     break;
   }
-  println(background_count);
 }
 void disp4() {//HOME
   background(255);
-  day_month_year(15, 530, 1.5);
-  w.display(20, 60);//x座標, y座標
-  c.display(230, 320);//x座標, y座標 
+  day_month_year(135, 530, 1.5);
+  w.display(110, 80);//x座標, y座標
+  c.display(230, 350);//x座標, y座標 
   menu_bar();
 
   fill(0);
@@ -95,12 +101,21 @@ void disp2() {//予定
   background_count = 0;
   plans();
   menu_bar_2();
-  fill(0);
-  textSize(20);
-  text(digital_clock(), 220, 20);
+  
   fill(255);
   noStroke();
-  rect(220, 20, 100, 20);
+  rect(220, 3, 50, 20);
+  fill(0);
+  
+  textSize(20);
+  text(digital_clock(), 220, 20);
+  
+}
+
+void disp5(){//予定確認
+ background_count = 1;
+ ta.display();
+ menu_bar_2();
 }
 
 void disp3() {//カレンダー

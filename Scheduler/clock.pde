@@ -20,9 +20,6 @@ class Clock {
     stroke(0);
     strokeWeight(3);
     line(x, y, xs, ys);
-    stroke(2);
-    noFill();
-    ellipse(x + 50 * cos(theta_s), y + 50 * sin(theta_s), 20, 20);
  
     theta_m = TWO_PI * minute() / 60 - PI / 2.0;
     xm = x + 80 * cos(theta_m);

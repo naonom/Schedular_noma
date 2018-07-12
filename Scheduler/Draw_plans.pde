@@ -28,6 +28,7 @@ void plans() {
     delete_icon();
     save_icon();
     color_icon();
+    reload_icon();
   }
 
 void delete_icon() {
@@ -68,4 +69,21 @@ void color_icon() {
   fill(0);
   textSize(20);
   text("色", 140, 630);
+}
+
+void reload_icon(){
+  fill(25, 22, 135);
+  noStroke();
+  ellipse(200, 590, 40, 40);
+  noFill();
+  stroke(255);
+  strokeWeight(3);
+  ellipse(200, 590, 25, 25);
+  line(187.5, 592, 193.5, 585);
+  line(187.5, 592, 181.5, 585);
+  line(212.5, 588, 218.5, 595);
+  line(212.5, 588, 206.5, 595);
+  fill(0);
+  textSize(20);
+  text("更新", 180, 630);
 }

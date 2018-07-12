@@ -13,7 +13,7 @@ void menu_bar_2() {
   textSize(20);
   for (int i = 0; i < 3; i++) {
     fill(255, 255, 255);
-    rect(width - n * 2, 20 + i * 60, 120, 40);
+    rect(width - n * 2 + 5, 20 + i * 60, 120, 40);
     if (i == 0) {
       fill(0);
       text("予定追加", width - n * 2 + 10, 47 + i * 60);

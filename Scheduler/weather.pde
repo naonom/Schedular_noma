@@ -22,14 +22,14 @@ class Weather {
     JSONObject t = f.getJSONObject("temperature");
     if (!t.isNull("min")) {
       String d = t.getJSONObject("min").getString("celsius");
-      s1 = s1 + "最低気温　" + d + "℃";
+      s1 = s1 + "最低気温" + d + "℃";
     }else if(t.isNull("min")){
-      s1 = s1 + "最低気温　";
+      s1 = s1 + "最低気温";
     if (!t.isNull("max")) {
       String d = t.getJSONObject("max").getString("celsius");
-      s2 = s2 + "最高気温　" + d + "℃";
+      s2 = s2 + "最高気温" + d + "℃";
     }else if(t.isNull("max")){
-      s2 = s2 + "最高気温　";
+      s2 = s2 + "最高気温";
     }
     }
     JSONObject i = f.getJSONObject("image");
