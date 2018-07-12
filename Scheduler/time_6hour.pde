@@ -10,6 +10,9 @@ class Time_6hour {
     fixation_s = second();
   }
   void display(int x, int y) {
+    if ( millis() / 1000  % 120 == 0) {
+      updateTimeLine();
+    }
     int s = fixation_s - second();
     if (second() == 59 && count == 0) {
       count = 1;

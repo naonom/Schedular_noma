@@ -54,6 +54,14 @@ void mousePressed() {
 }
 
 void mouseClicked() {
+  if (pow(mouseX - 420, 2) + pow(mouseY - 400, 2) < 400){
+    tweet("起きた。" + hour() + ":" + minute());
+    println(1);
+  }
+  if (pow(mouseX - 420, 2) + pow(mouseY - 460, 2) < 400){
+    tweet("寝た。" + hour() + ":" + minute());
+    println(2);
+  }
   int task_count = 0;
   if (page == 2) {
     if (pow(mouseX - 50, 2) + pow(mouseY - 590, 2) < 1600) {//消す
@@ -77,4 +85,6 @@ void mouseClicked() {
       ta = new Task();
     }
   }
+  //if(page == 0){
+    //if
 }

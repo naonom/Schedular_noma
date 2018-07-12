@@ -1,0 +1,8 @@
+self studying,course,sleeping,leisure,etcetra
+SUN,57,0,80,27,28
+MON,30,36,55,32,40
+TUE,28,36,55,37,37
+WED,16,36,71,32,39
+THU,27,12,67,35,52
+FRI,28,36,53,40,36
+SAT,20,0,97,40,36

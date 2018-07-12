@@ -28,7 +28,7 @@ void menu_bar() {
     }
     if (i == 3) {
       fill(0);
-      text("カレンダー", width - m * 2 + 10, 47 + i * 60);
+      text("僕の2週間", width - m * 2 + 10, 47 + i * 60);
     }
     if (i == 4) {
       fill(0);
@@ -36,8 +36,36 @@ void menu_bar() {
     }
   }
   menu_effect();
+  tweet_icon_getup();
+  tweet_icon_sleep();
 }
 
+void tweet_icon_getup() {
+  fill(255, 129, 25);
+  stroke(255);
+  strokeWeight(2);
+  ellipse(width - m * 2 + 60, 400, 40, 40);
+  fill(255);
+  noStroke();
+  ellipse(width - m * 2 + 60, 400, 18, 18); 
+  for (int i = 0; i < 8; i ++) {
+    ellipse(width - m * 2 + 60 + 13 * sin(PI / 4 * i), 400 + 13 * cos(PI / 4 * i), 5, 5);
+  }
+}
+
+void tweet_icon_sleep() {
+  fill(30, 30, 45);
+  stroke(255);
+  strokeWeight(2);
+  ellipse(width - m * 2 + 60, 460, 40, 40);
+  fill(255);
+  noStroke();
+  ellipse(width - m * 2 + 60 , 460, 25, 25);
+  fill(30, 30, 45);
+  noStroke();
+  ellipse(width - m * 2 + 60 - 4, 460, 22, 22);
+}
+//width - m * 2 + 60
 void menu_effect() {
   if (mouseX > width - 120) {
     for (int i = 0; i < 5; i++) {
